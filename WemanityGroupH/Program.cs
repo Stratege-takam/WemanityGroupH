@@ -7,9 +7,6 @@ namespace WemanityGroupH
     {
         static void Main(string[] args)
         {
-
-
-
             var birthdayGreeterService = new BirthdayGreeterService()
             {
                 UserService = new UserService(),

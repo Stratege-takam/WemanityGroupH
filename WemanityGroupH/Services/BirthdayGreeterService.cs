@@ -8,6 +8,7 @@ namespace WemanityGroupH.Services
     {
         public UserService UserService { get; set; }
         public MailingService MailingService { get; set; }
+
         private const string _mailTemplate = "Happy Birthday, dear {firstname}!";
         private const string _subject = "Happy birthday!";
 

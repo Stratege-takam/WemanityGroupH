@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using WemanityGroupH.Models;
 
@@ -10,7 +12,6 @@ namespace WemanityGroupH.Services
         public List<User> Users { get; set; }
         public UserService()
         {
-
                 Users = new List<User>()
                 {
                     new User()
@@ -36,9 +37,13 @@ namespace WemanityGroupH.Services
                     }
                 };
         }
-        public void ReadFromFileAsync()
+        public void ReadFromFileAsync(string filePath)
         {
-            
+            using (StreamReader r = new StreamReader(filePath))
+            {
+                string json = r.ReadToEnd();
+                Users = JsonConvert.DeserializeObject<List<User>>(json);
+            }
         }
     }
 }

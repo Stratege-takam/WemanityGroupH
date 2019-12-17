@@ -1,0 +1,22 @@
+[
+  {
+    "Lastname": "Doe",
+    "Firstname": "John",
+    "BirthDate": "2019/12/17",
+    "Mail": "pkriwin@wemanity.com"
+  },
+
+  {
+    "Lastname": "Takam",
+    "Firstname": "Danick",
+    "BirthDate": "2019/12/17",
+    "Mail": "213346@supinfo.com"
+  },
+  {
+    "Lastname": "Emmanuel",
+    "Firstname": "Dibi",
+    "BirthDate": "2019/12/17",
+    "Mail": "297192@supinfo.com"
+  }
+ 
+]
