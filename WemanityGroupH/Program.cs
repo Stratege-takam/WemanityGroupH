@@ -7,16 +7,24 @@ namespace WemanityGroupH
     {
         static void Main(string[] args)
         {
-            var birthdayGreeterService = new BirthdayGreeterService()
-            {
-                UserService = new UserService(),
-                MailingService = new MailingService()
-            };
+			try
+			{
+                var birthdayGreeterService = new BirthdayGreeterService()
+                {
+                    UserService = new UserService(),
+                    MailingService = new MailingService()
+                };
 
-            birthdayGreeterService.GreetBirthdays();
+                birthdayGreeterService.GreetBirthdays();
 
-            Console.WriteLine("End");
-            Console.ReadLine();
+                Console.WriteLine("End");
+                Console.ReadLine();
+            }
+			catch (Exception e)
+			{
+
+				Console.WriteLine(e.Message);
+			}
         }
     }
 }
